@@ -23,4 +23,13 @@ public class MoodAnalyzerTest {
 		Assert.assertEquals("HAPPY", actualOutput);
 	}
 
+/* Test case to check null condition */
+	@Test
+	public void givenMessageWhenNullShouldReturnExceptionHandled() {
+		// create object of MoodAnalyzer
+		MoodAnalyzer moodanalyzer = new MoodAnalyzer(null);
+		String actualOutput = moodanalyzer.analyzeMood();
+		Assert.assertEquals("HAPPY", actualOutput);
+	}
+
 }
